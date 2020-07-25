@@ -10,7 +10,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/d72900e5de.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="shorcut icon" href="assets/icon.svg">
     <title>Hukum Dotcom</title>
@@ -18,26 +18,31 @@
 </head>
 
 <body>
-    <script type="text/javascript" src="main.js"></script>
+    <script src="smoothscroll/smooth-scroll-master/dist/smooth-scroll.js"></script>
+    <!-- Get a specific version -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="belajarwebsite.js"></script>
     <!-- Image and text -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-title">
             <a class="navbar-brand" href="#">Navbar</a></div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse text-center" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Features</a>
-                <a class="nav-item nav-link" href="#">Pricing</a>
-                <a class="nav-item nav-link" href="#">Disabled</a>
+                <a class="nav-item nav-link active" href="#banner">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#daftar">Daftar</a>
+                <a class="nav-item nav-link" href="#about-us">About Us</a>
             </div>
 
 
         </div>
         <div class="sosial">
-            <a href="https://www.facebook.com/groups/543169876044894/?ref=bookmarks" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/reizhafajrian" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://twitter.com/jezzjerry" target="_blank"><i class="fab fa-twitter"></i></a>
             <a href="https://www.instagram.com/reizhafajrian" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
@@ -60,105 +65,137 @@
 
 
     <section id="banner">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>Hukum Dotcom adalah website yang membantu dan menangani kasus hukum di Negara Indonesia,proses kemudahan untuk berkonsultasi kami tawarkan dalam webiste kami kami memiliki mitra hukum yang berkompeten dalam bidangnya
-                    </p>
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="textfirst">Hukum Dotcom adalah website yang membantu dan menangani kasus hukum di Negara Indonesia,proses kemudahan untuk berkonsultasi kami tawarkan dalam webiste kami kami memiliki mitra hukum yang berkompeten dalam bidangnya
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img class="image" src="assets/undraw_judge_katerina_limpitsouni_ny1q.svg">
+                    </div>
+                    <div class="col-md-6 text-center ">
+                        <button type="submit " id="button1" value="Learn more " class="btn ">Learn more</button>
+
+                    </div>
                 </div>
-                <div class="col-md-6 text-center">
-                    <img class="image" src="assets/undraw_judge_katerina_limpitsouni_ny1q.svg">
-                </div>
-                <div class="col-md-6 text-center ">
-                    <button type="submit " value="Learn more " class="btn ">Learn more</button>
+            </div>
+        </article>
+
+    </section>
+    <div class="container"></div>
+
+    <section id="daftar" class="daftar ">
+        <article>
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-md-6 sign-up ">
+                        <form action="# " class="sign-up-form ">
+                            <h2 class="title ">Sign up</h2>
+                            <div class="input-field ">
+                                <i class="fas fa-user "></i>
+                                <input type="text " placeholder="Username " id="username" required />
+                            </div>
+
+
+                            <div class="input-field ">
+                                <i class="fas fa-envelope "></i>
+                                <input type="email " id="email" placeholder="Email " onclick="removeEmail();" required/>
+                            </div>
+                            <div id="messages-email">
+                                <p class="message">email anda tidak valid</p>
+                            </div>
+                            <div class="input-field ">
+                                <i class="fas fa-lock "></i>
+                                <input type="password" for="password" id="psw" placeholder="Password" onclick="removePassword();" required/>
+                            </div>
+                            <div id="messages-password">
+                                <p>password yang anda masukan huruf awal harus kapital dan terdiri dari angka dan panjang karakter minimal 8</p>
+                            </div>
+                            <div id="messages-berhasil">
+                                <p>akun anda berhasil dibuat</p>
+                            </div>
+                            <button action type="submit " class="btn " value="Sign up " onclick="emailcheck();validation();createAccount();location.href='/Belajarwebsite/index.html'">Sign up</button>
+                            <p class="social-text ">Or Sign up with social platforms</p>
+                            <div class="social-media ">
+                                <a href="# " class="social-icon " onclick="showMessageSosmed()">
+                                    <i class="fab fa-facebook-f "></i>
+                                </a>
+                                <a href="# " class="social-icon " onclick="showMessageSosmed()">
+                                    <i class="fab fa-twitter "></i>
+                                </a>
+                                <a href="# " class="social-icon " onclick="showMessageSosmed()">
+                                    <i class="fab fa-google "></i>
+                                </a>
+                                <a href="# " class="social-icon " onclick="showMessageSosmed()">
+                                    <i class="fab fa-linkedin-in "></i>
+                                </a>
+                            </div>
+                            <div id="messages-sosmed">
+                                <p>Menu ini belum tersedia</p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6 sign-up-logo ">
+                        <img src="assets/law-icon-flat/4463.jpg " class="image " alt=" ">
+                    </div>
+
 
                 </div>
             </div>
-        </div>
-
-
+        </article>
     </section>
 
-    <section class="daftar ">
-        <div class="container ">
-            <div class="row ">
-                <div class="col-md-6 sign-up ">
-                    <form action="# " class="sign-up-form ">
-                        <h2 class="title ">Sign up</h2>
-                        <div class="input-field ">
-                            <i class="fas fa-user "></i>
-                            <input type="text " placeholder="Username " />
-                        </div>
-                        <div class="input-field ">
-                            <i class="fas fa-envelope "></i>
-                            <input type="email " placeholder="Email " />
-                        </div>
-                        <div class="input-field ">
-                            <i class="fas fa-lock "></i>
-                            <input type="password " id="psw" placeholder="Password " />
-                        </div>
-                        <button type="submit " class="btn " value="Sign up ">Sign up</button>
-                        <p class="social-text ">Or Sign up with social platforms</p>
-                        <div class="social-media ">
-                            <a href="# " class="social-icon ">
-                                <i class="fab fa-facebook-f "></i>
-                            </a>
-                            <a href="# " class="social-icon ">
-                                <i class="fab fa-twitter "></i>
-                            </a>
-                            <a href="# " class="social-icon ">
-                                <i class="fab fa-google "></i>
-                            </a>
-                            <a href="# " class="social-icon ">
-                                <i class="fab fa-linkedin-in "></i>
-                            </a>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-md-6 sign-up-logo ">
-                    <img src="assets/law-icon-flat/4463.jpg " class="image " alt=" ">
-                </div>
-                <div id="message">
-                    <h3>Password must contain the following:</h3>
-                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-                    <p id="number" class="invalid">A <b>number</b></p>
-                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-                </div>
 
-            </div>
-        </div>
-    </section>
 
 
 
 
     <section id="services ">
-        <div class="container ">
-            <div class="row ">
-                <div class="col-md-4 ">
-                    <img class="image-services img " src="assets/lawyer-concept-illustration/3968614.jpg " alt=" ">
-                    <p>Kami menangani client dengan masalah hukum tindak pidana </p>
-                </div>
-                <div class="col-md-4 ">
-                    <img class="image-services img " src="assets/lawyer-concept-illustration/3968614.jpg " alt=" ">
-                    <p>kami menangani masalah hukum perdata</p>
-                </div>
-                <div class="col-md-4 ">
-                    <img class="image-services img " src="assets/lawyer-concept-illustration/3968614.jpg " alt=" ">
-                    <p></p>
+        <article>
+            <div class="container text-center">
+                <h1>Apa yang kami lakukan?</h1>
+                <div class="row ">
+
+                    <div class="col-md-4 ">
+                        <img class="image-services img " src="assets/undraw_Problem_solving_re_4gq3.svg" alt=" ">
+                        <p>Kami menangani client dengan masalah hukum tindak pidana </p>
+                    </div>
+                    <div class="col-md-4 ">
+                        <img class="image-services img " src="assets/undraw_professional_card_otb4.svg" alt=" ">
+                        <p>kami menangani masalah hukum perdata</p>
+                    </div>
+                    <div class="col-md-4 ">
+                        <img class="image-services img " src="assets/undraw_settings_tab_mgiw.svg" alt=" ">
+                        <p>kami juga menangani kasus hukum internasional</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-
+        </article>
     </section>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+    <section id="about-us">
+        <aside>
+            <div class="container text-center">
+                <h1>About me</h1>
+                <img class="img-reizha" src="assets/reizha_fajrian.jpg" alt="">
+                <p>Reizha fajrian</p>
+                <p>Reizha77@gmail.com</p>
+            </div>
+        </aside>
+    </section>
+    <div class="footer">
+        <footer class="text-center">
+            <p>© 2020 Reizha fajrian - All Rights Reserved</p>
+
+
+        </footer>
+    </div>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
 </body>
 
 </html>

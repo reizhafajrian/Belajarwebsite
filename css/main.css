@@ -57,11 +57,7 @@ body {
 }
 
 .image {
-    width: 200px;
-}
-
-section {
-    padding-top: 180px;
+    width: 300px;
 }
 
 #services {
@@ -156,4 +152,54 @@ section {
 .sign-up-logo {
     text-align: center;
     padding-top: 30px;
+}
+
+#messages-password {
+    text-align: left;
+    color: red;
+    display: none;
+}
+
+#messages-email {
+    text-align: left;
+    color: red;
+    display: none;
+}
+
+#messages-berhasil {
+    color: green;
+    display: none;
+}
+
+#messages-sosmed {
+    color: red;
+    display: none;
+}
+
+section {
+    padding-top: 100px;
+    height: 100vh;
+}
+
+footer {
+    display: in;
+}
+
+.img-reizha {
+    width: 200px;
+}
+
+.textfirst {
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 993px) {
+    section {
+        display: inline;
+        text-align: center;
+    }
+}
+
+.footer p {
+    overflow: -moz-hidden-unscrollable;
 }
